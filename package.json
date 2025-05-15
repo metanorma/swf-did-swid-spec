@@ -1,0 +1,26 @@
+{
+  "name": "didswid",
+  "version": "1.0.0",
+  "description": "did:swid -- did:web + Verifiable History",
+  "main": "index.js",
+  "scripts": {
+    "edit": "node -e \"require('spec-up')()\"",
+    "render": "node -e \"require('spec-up')({ nowatch: true })\"",
+    "dev": "node -e \"require('spec-up')({ dev: true })\""
+  },
+  "keywords": [
+    "decentralized identifier",
+    "DID",
+    "Spatial Web",
+    "SWID"
+  ],
+  "author": "Markus Sabadello",
+  "license": "none",
+  "bugs": {
+    "url": "https://github.com/peacekeeper/did-swid-spec/issues"
+  },
+  "homepage": "https://identity.foundation/didwebvh/",
+  "dependencies": {
+    "spec-up": "github:brianorwhatever/spec-up#master"
+  }
+}
