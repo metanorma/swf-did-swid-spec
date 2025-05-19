@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/peacekeeper/did-swid-spec/issues"
   },
-  "homepage": "https://identity.foundation/didwebvh/",
+  "homepage": "https://peacekeeper.github.io/did-swid-spec/",
   "dependencies": {
     "spec-up": "github:brianorwhatever/spec-up#master"
   }

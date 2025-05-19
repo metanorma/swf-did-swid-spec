@@ -7,7 +7,7 @@ The `did:swid` DID Method<br>v1.0 / Editors Draft
 
 **Current Specification:** [v0.1](../v0.1)
 
-**Specification Version:** v0.1 (see [Changelog](#didwebvh-version-changelog))
+**Specification Version:** v0.1 (see [Changelog](#didswid-version-changelog))
 
 **Source of Latest Draft:**
   [https://github.com/peacekeeper/did-swid-spec](https://github.com/peacekeeper/did-swid-spec)

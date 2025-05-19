@@ -2,12 +2,12 @@
 
 The spec repository for the `did:swid` DID Method.
 
-Read the spec: [https://identity.foundation/didwebvh](https://identity.foundation/didwebvh/next)
+Read the spec: [https://peacekeeper.github.io/did-swid-spec/](https://peacekeeper.github.io/did-swid-spec/)
 
 ## Current Status of the Specification
 
 The current stable version of the specification can be found at
-[https://identity.foundation/didwebvh](https://identity.foundation/didwebvh).
+[https://peacekeeper.github.io/did-swid-spec/](https://peacekeeper.github.io/did-swid-spec/).
 See any guidance there about the status of the specification -- past versions,
 upcoming changes, etc.
 
