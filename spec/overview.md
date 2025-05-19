@@ -6,7 +6,3 @@ The Spatial Web will use SWIDs as identifiers.
 
 The `did:swid` method leverages a registry known as Spatial Web SWID Registry, which is
 managed by a Designated Authority.
-
-The following is a `tl;dr` summary of how `did:swid` works:
-
-1. TODO

@@ -20,9 +20,7 @@ self-certifying identifier]] (SCID) for the DID.
   
 As specified in the following Augmented Backus-Naur Form (ABNF) notation
 [[spec:rfc2234]] the [[ref: SCID]] **MUST** be present in the DID string. See
-examples below. The `domain-segment` and `path-segment` elements refer to
-[[spec:rfc3986]]'s ABNF for a Generic URL (page 49). Attempting to replicate
-here the full ABNF of those elements from that RFC would inevitably be wrong.
+examples below.
 
 ```abnf
 swid-did = "did:swid:" scid
@@ -36,5 +34,5 @@ this specification.
 Example SWID:
 
 ```
-did:swid:QmfGEUAcMpzo25kF2Rhn8L5FAXysfGnkzjwdKoNPi615XQ
+did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv
 ```
