@@ -8,9 +8,10 @@
         "abstract.md",
         "overview.md",
         "did_method_identifier.md",
+        "did_method_diddocument.md",
         "did_method_operations.md",
         "did_method_registry.md",
-        "did_method_processes.md",
+        "security_and_privacy.md",
         "definitions.md",
         "references.md",
         "version.md"
@@ -35,6 +36,31 @@
               "Manu Sporny"
             ],
             "status": "Internet Draft"
+          }
+        },
+        {
+          "DID-REGISTRATION": {
+            "href": "https://identity.foundation/did-registration/",
+            "title": "DID Registration",
+            "rawDate": "2025-05-19",
+            "authors": [
+              "Markus Sabadello",
+              "Cihan Saglam",
+              "Ahamed Azeem"
+            ],
+            "status": "Draft"
+          }
+        },
+        {
+          "DID-RESOLUTION": {
+            "href": "https://www.w3.org/TR/did-resolution/",
+            "title": "DID Resolution",
+            "rawDate": "2025-04-23",
+            "authors": [
+              "Markus Sabadello",
+              "Dmitri Zagidulin"
+            ],
+            "status": "Working Draft"
           }
         },
         {

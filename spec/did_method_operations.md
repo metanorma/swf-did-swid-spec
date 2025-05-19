@@ -15,7 +15,7 @@ The public key is included in the initial version of the DID document.
 Example Request to create a SWID:
 
 ```
-HTTP POST to https://<did-issuer>/create?method=swid"
+HTTP POST to https://<did-issuer>/create?method=swid
 ```
 
 ```json
@@ -68,7 +68,7 @@ W3C [[spec: DID-RESOLUTION]] specification is used.
 Example Request to resolve a SWID:
 
 ```
-HTTP POST to https://<swid-resolve>/identifiers/did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv"
+HTTP POST to https://<swid-resolve>/identifiers/did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv
 ```
 
 Example Response:
@@ -113,7 +113,7 @@ Updating a SWID can include the following:
 Example Request to update a SWID:
 
 ```
-HTTP POST to https://<swid-registry>/update"
+HTTP POST to https://<swid-registry>/update
 ```
 
 ```json
@@ -169,7 +169,7 @@ DIF [[spec: DID-REGISTRATION]] specification is used.
 Example Request to deactivate a SWID:
 
 ```
-HTTP POST to https://<swid-registry>/deactivate"
+HTTP POST to https://<swid-registry>/deactivate
 ```
 
 ```json
