@@ -7,8 +7,10 @@
         "header.md",
         "abstract.md",
         "overview.md",
-        "specification.md",
-        "security_and_privacy.md",
+        "did_method_identifier.md",
+        "did_method_operations.md",
+        "did_method_registry.md",
+        "did_method_processes.md",
         "definitions.md",
         "references.md",
         "version.md"
@@ -18,7 +20,7 @@
         "account": "peacekeeper",
         "repo": "did-swid-spec"
       },
-      "output_path": "./next",
+      "output_path": "./dist",
       "logo": "https://raw.githubusercontent.com/peacekeeper/did-swid-spec/refs/heads/main/didswid.jpg",
       "logo_link": "https://github.com/peacekeeper/did-swid-spec",
       "katex": true,

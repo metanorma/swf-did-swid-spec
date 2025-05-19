@@ -1,6 +1,10 @@
 ## Abstract
 
-DID Web + Verifiable History (`did:webvh`) is an enhancement to the [[ref: did:web]] DID method,
+`did:webvh` is a [DID method](https://www.w3.org/TR/did-1.1/#methods) for the [Spatial Web](https://spatialwebfoundation.org/).
+
+
+
+is an enhancement to the [[ref: did:web]] DID method,
 providing complementary features that address `did:web`'s
 limitations as a long-lasting DID. `did:webvh` features include:
 
