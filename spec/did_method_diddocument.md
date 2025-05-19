@@ -9,10 +9,19 @@ This specification defines a new service endpoint type `HSTPEndpoint`, which poi
 Hyperspace Transaction Protocol (HSTP) endpoint for a Spatial Web Node where the entity
 lives.
 
-### Example
+```json
+{
+  "service": [{
+    "id": "did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv#hstp",
+    "type": "HSTPEndpoint",
+    "serviceEndpoint": "https://hstp.example.com/hstpendpoint"
+  }]
+}
+```
 
-The target system of the `did:swid` DID method is a registry known as Spatial
-Web SWID Registry, which is managed by a Designated Authority.
+### Example DID Document
+
+The following is an example of a complete DID document for a `did:swid` DID:
 
 ```json
 {
@@ -28,6 +37,9 @@ Web SWID Registry, which is managed by a Designated Authority.
     "publicKeyMultibase": "z6MkmM42vxfqZQsv4ehtTjFFxQ4sQKS2w6WR7emozFAn5cxu"
   }],
   "authentication": [
+    "did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv#keys-1"
+  ],
+  "assertionMethod": [
     "did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv#keys-1"
   ],
   "service": [{
