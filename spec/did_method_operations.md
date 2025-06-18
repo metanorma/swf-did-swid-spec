@@ -2,20 +2,55 @@
 
 ### Create (Register)
 
-The following diagram describes the process of creating a `did:swid`:
+The following diagram describes the process of creating and registering a `did:swid`:
 
 ![swid-registration.png](./images/swid-registration.png)
 
-To create a SWID, the [`create` function](https://identity.foundation/did-registration/#create) of the
-DIF [[spec: DID-REGISTRATION]] specification is used.
+To create a SWID, the Entity first generates a private/public key pair that controls the DID.
+The public key is included as a verification method in the initial version of the DID document.
 
-Before creating a SWID, the Entity first generated a private/public key pair that controls the DID.
-The public key is included in the initial version of the DID document.
+Example initial DID document:
 
-Example Request to create a SWID:
+```json
+{
+   "@context": [
+      "https://www.w3.org/ns/did/v1.1",
+      "https://spatialwebfoundation.org/contexts/did/1.0"
+   ],
+   "verificationMethod": [{
+      "id": "#keys-1",
+      "type": "Multikey",
+      "publicKeyMultibase": "z6MkmM42vxfqZQsv4ehtTjFFxQ4sQKS2w6WR7emozFAn5cxu"
+   }],
+   "authentication": [
+     "#keys-1"
+   ],
+   "service": [{
+      "id": "#hstp",
+      "type": "HSTPEndpoint",
+      "serviceEndpoint": "https://hstp.example.com/hstpendpoint"
+   }]
+}
+```
+
+Using the initial version of the DID document, the first entry of the Cryptographic Event Log
+(see [The SWID Registry](#the-swid-registry)) is constructed.
+A cryptographic digest (hash) of this entry is created and encoded using [[ref: multihash]], and
+is used as the `scid` part of the `did:swid` identifier (see [#identifier]).
+
+Example SWID:
 
 ```
-HTTP POST to https://<did-issuer>/create?method=swid
+did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv
+```
+
+To register a SWID, the [`create` function](https://identity.foundation/did-registration/#create) of the
+DIF [[spec: DID-REGISTRATION]] specification is used.
+
+Example Request to register a SWID:
+
+```
+HTTP POST to https://<swid-registry>/create?method=swid
 ```
 
 ```json
@@ -68,7 +103,7 @@ W3C [[spec: DID-RESOLUTION]] specification is used.
 Example Request to resolve a SWID:
 
 ```
-HTTP POST to https://<swid-resolve>/identifiers/did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv
+HTTP POST to https://<swid-resolver>/identifiers/did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv
 ```
 
 Example Response:
