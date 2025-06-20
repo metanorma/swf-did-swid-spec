@@ -1,4 +1,4 @@
-The `did:swid` DID Method<br>v1.0 / Editors Draft
+The `did:swid` DID Method<br>v0.1 / Editors Draft
 ==================
 
 ![did:swid Logo](https://raw.githubusercontent.com/peacekeeper/did-swid-spec/refs/heads/main/didswid.jpg)
