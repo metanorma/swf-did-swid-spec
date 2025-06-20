@@ -10,7 +10,7 @@ The following diagram describes the process of creating and registering a `did:s
 
 To create a `did:swid`, the Entity first generates a private/public key pair that controls the DID.
 The public key is included as a verification method in the initial version of the DID document.
-The initial version of the DID document MAY also contain other information such as an
+The initial version of the DID document also contains other information such as an
 [HSTP service endpoint](#hstp-service-endpoint-type).
 
 **Example initial DID document:**
@@ -51,6 +51,17 @@ did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv
 #### Using a DID Issuer Service
 
 A `did:swid` or other type of SWID may be created by a "DID Issuer Service" at behest of the Entity.
+
+The following diagram describes the process of creating a SWID using a "DID Issuer Service":
+
+![creating-a-swid-using-a-did-issuer-service.png](./images/creating-a-swid-using-a-did-issuer-service.png)
+
+When creating a `did:swid` or other type of SWID, the "DID Issuer Service" MUST
+enforce that the DID document associated with the SWID is a conformant SWID Document,
+i.e. it MUST have an HSTP Service Endpoint. Otherwise, the "DID Issuer Service" MUST
+return an error response.
+
+See [[spec: SWIDS-AND-SWID-DOCUMENTS]] for more details about SWIDs and SWID Documents.
 
 To create a SWID using a "DID Issuer Service", the [`create` function](https://identity.foundation/did-registration/#create) of the
 DIF [[spec: DID-REGISTRATION]] specification is used.

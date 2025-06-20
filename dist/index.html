@@ -77,7 +77,8 @@ with the following design goals and properties:</p>
 </ul>
 <h2 id="overview"><a class="toc-anchor" href="#overview" >§</a> Overview</h2>
 <p>This specification defines the <code>did:swid</code> method for <a class="term-reference" href="#term:decentralized-identifiers">Decentralized Identifiers</a> (DIDs).
-DIDs using this method can be used as “Spatial Web Identifiers (SWIDs)”, see [<a class="spec-reference" href="#ref:SWIDS-AND-SWID-DOCUMENTS">SWIDS-AND-SWID-DOCUMENTS</a>].</p>
+DIDs using this method can be used as “Spatial Web Identifiers (SWIDs)”.
+See [<a class="spec-reference" href="#ref:SWIDS-AND-SWID-DOCUMENTS">SWIDS-AND-SWID-DOCUMENTS</a>] for more details about SWIDs.</p>
 <p>The Spatial Web will use SWIDs as identifiers.</p>
 <p>The <code>did:swid</code> method leverages a registry known as Spatial Web SWID Registry, which is
 managed by a Designated Authority.</p>
@@ -113,7 +114,7 @@ of the first entry of a data structure known as <a path-0="digitalbazaar.github.
 <h4 id="creating-a-didswid"><a class="toc-anchor" href="#creating-a-didswid" >§</a> Creating a <code>did:swid</code></h4>
 <p>To create a <code>did:swid</code>, the Entity first generates a private/public key pair that controls the DID.
 The public key is included as a verification method in the initial version of the DID document.
-The initial version of the DID document MAY also contain other information such as an
+The initial version of the DID document also contains other information such as an
 <a href="#hstp-service-endpoint-type" >HSTP service endpoint</a>.</p>
 <p><strong>Example initial DID document:</strong></p>
 <pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
@@ -145,6 +146,13 @@ is used as the <code>scid</code> part of the <code>did:swid</code> identifier (s
 </code></pre>
 <h4 id="using-a-did-issuer-service"><a class="toc-anchor" href="#using-a-did-issuer-service" >§</a> Using a DID Issuer Service</h4>
 <p>A <code>did:swid</code> or other type of SWID may be created by a “DID Issuer Service” at behest of the Entity.</p>
+<p>The following diagram describes the process of creating a SWID using a “DID Issuer Service”:</p>
+<p><img src="./images/creating-a-swid-using-a-did-issuer-service.png" alt="creating-a-swid-using-a-did-issuer-service.png"></p>
+<p>When creating a <code>did:swid</code> or other type of SWID, the “DID Issuer Service” MUST
+enforce that the DID document associated with the SWID is a conformant SWID Document,
+i.e. it MUST have an HSTP Service Endpoint. Otherwise, the “DID Issuer Service” MUST
+return an error response.</p>
+<p>See [<a class="spec-reference" href="#ref:SWIDS-AND-SWID-DOCUMENTS">SWIDS-AND-SWID-DOCUMENTS</a>] for more details about SWIDs and SWID Documents.</p>
 <p>To create a SWID using a “DID Issuer Service”, the <a path-0="identity.foundation"path-1="did-registration"path-2="#create"href="https://identity.foundation/did-registration/#create" ><code>create</code> function</a> of the
 DIF [<a class="spec-reference" href="#ref:DID-REGISTRATION">DID-REGISTRATION</a>] specification is used.</p>
 <p><strong>Example Request to create a SWID:</strong></p>
