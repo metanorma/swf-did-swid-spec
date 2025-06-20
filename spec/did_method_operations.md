@@ -2,13 +2,13 @@
 
 ### Create (Register)
 
-The following diagram describes the process of creating and registering a `did:swid` (SWID):
+The following diagram describes the process of creating and registering a `did:swid`:
 
 ![swid-registration.png](./images/swid-registration.png)
 
-#### Creating a SWID
+#### Creating a `did:swid`
 
-To create a SWID, the Entity first generates a private/public key pair that controls the DID.
+To create a `did:swid`, the Entity first generates a private/public key pair that controls the DID.
 The public key is included as a verification method in the initial version of the DID document.
 The initial version of the DID document MAY also contain other information such as an
 [HSTP service endpoint](#hstp-service-endpoint-type).
@@ -50,7 +50,7 @@ did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv
 
 #### Using a DID Issuer Service
 
-A SWID may be created by a "DID Issuer Service" at behest of the Entity.
+A `did:swid` or other type of SWID may be created by a "DID Issuer Service" at behest of the Entity.
 
 To create a SWID using a "DID Issuer Service", the [`create` function](https://identity.foundation/did-registration/#create) of the
 DIF [[spec: DID-REGISTRATION]] specification is used.
@@ -117,7 +117,7 @@ of this specification.
 
 ### Read (Resolve)
 
-To resolve a SWID, the [`resolve` function](https://www.w3.org/TR/did-resolution/#resolving) of the
+To resolve a `did:swid` or other type of SWID, the [`resolve` function](https://www.w3.org/TR/did-resolution/#resolving) of the
 W3C [[spec: DID-RESOLUTION]] specification is used.
 
 **Example Request to resolve a SWID:**
@@ -158,7 +158,7 @@ HTTP POST to https://<swid-resolver>/identifiers/did:swid:zQmQoeG7u6XBtdXoek5p3a
 
 ### Update (Rotate)
 
-To update a SWID, the [`update` function](https://identity.foundation/did-registration/#update) of the
+To update a `did:swid` or other type of SWID, the [`update` function](https://identity.foundation/did-registration/#update) of the
 DIF [[spec: DID-REGISTRATION]] specification is used.
 
 Updating a SWID can include the following:
@@ -222,7 +222,7 @@ and [Signing Responses](https://identity.foundation/did-registration/#signing-re
 
 ### Deactivate (Revoke)
 
-To update a SWID, the [`deactivate` function](https://identity.foundation/did-registration/#deactivate) of the
+To deactivate a `did:swid` or other type of SWID, the [`deactivate` function](https://identity.foundation/did-registration/#deactivate) of the
 DIF [[spec: DID-REGISTRATION]] specification is used.
 
 **Example Request to deactivate a SWID:**

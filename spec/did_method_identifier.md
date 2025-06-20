@@ -33,7 +33,7 @@ of the first entry of a data structure known as [Cryptographic Event Log](https:
 
 The characters in the `base58-btc-alphabet` are as defined in the W3C [Controller Documents](https://www.w3.org/TR/cid-1.0/#multibase-0) specification.
 
-Example SWID:
+Example `did:swid`:
 
 ```
 did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv

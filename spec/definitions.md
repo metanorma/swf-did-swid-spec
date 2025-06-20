@@ -25,7 +25,7 @@ by the controller of the DID.
 ~ The entity that controls (create, updates, deletes) a given DID, as defined
 in the [[spec:DID-CORE]].
 
-[[def: DIDDoc]]
+[[def: DID Document]]
 
 ~ A DID Document as defined by the [[spec: DID-Core]] -- the document returned when a DID is resolved.
 

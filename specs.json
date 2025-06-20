@@ -8,7 +8,6 @@
         "abstract.md",
         "overview.md",
         "did_method_identifier.md",
-        "did_method_diddocument.md",
         "did_method_operations.md",
         "did_method_registry.md",
         "security_and_privacy.md",
@@ -27,7 +26,7 @@
       "katex": true,
       "external_specs": [
         {
-          "DID-SWID": {
+          "SWIDS-AND-SWID-DOCUMENTS": {
             "href": "https://peacekeeper.github.io/swid-document-spec/",
             "title": "SWIDs and SWID Documents",
             "rawDate": "2025-06-20",
