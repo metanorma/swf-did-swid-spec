@@ -1,7 +1,7 @@
 {
   "specs": [
     {
-      "title": "The did:swid DID Method - v1.0 (Editors Draft)",
+      "title": "The did:swid DID Method - v0.1 (Editors Draft)",
       "spec_directory": "./spec",
       "markdown_paths": [
         "header.md",
@@ -22,10 +22,21 @@
         "repo": "did-swid-spec"
       },
       "output_path": "./dist",
-      "logo": "https://raw.githubusercontent.com/peacekeeper/did-swid-spec/refs/heads/main/didswid.jpg",
+      "logo": "https://raw.githubusercontent.com/peacekeeper/did-swid-spec/refs/heads/main/spatialweb.jpg",
       "logo_link": "https://github.com/peacekeeper/did-swid-spec",
       "katex": true,
       "external_specs": [
+        {
+          "DID-SWID": {
+            "href": "https://peacekeeper.github.io/swid-document-spec/",
+            "title": "SWIDs and SWID Documents",
+            "rawDate": "2025-06-20",
+            "authors": [
+              "Markus Sabadello"
+            ],
+            "status": "Draft"
+          }
+        },
         {
           "multiformats": {
             "href": "https://datatracker.ietf.org/doc/draft-multiformats-multibase/08/",

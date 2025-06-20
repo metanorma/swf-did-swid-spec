@@ -1,7 +1,7 @@
 The `did:swid` DID Method<br>v0.1 / Editors Draft
 ==================
 
-![did:swid Logo](https://raw.githubusercontent.com/peacekeeper/did-swid-spec/refs/heads/main/didswid.jpg)
+![Spatial Web Logo](https://raw.githubusercontent.com/peacekeeper/did-swid-spec/refs/heads/main/spatialweb.jpg)
 
 **Specification Status:** v0.1 - EDITORS DRAFT
 

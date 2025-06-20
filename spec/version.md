@@ -1,4 +1,4 @@
-## `did:swid` Version Changelog
+## Version Changelog
 
 The following lists the substantive changes in each version of the specification.
 
