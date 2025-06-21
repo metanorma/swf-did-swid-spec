@@ -10,8 +10,11 @@ The following diagram describes the process of creating and registering a `did:s
 
 To create a `did:swid`, the Entity first generates a private/public key pair that controls the DID.
 The public key is included as a verification method in the initial version of the DID document.
-The initial version of the DID document also contains other information such as an
-[HSTP service endpoint](#hstp-service-endpoint-type).
+
+This initial version of the DID document MUST be a conformant SWID Document,
+i.e. it MUST have an HSTP Service Endpoint.
+
+See [[spec: SWIDS-AND-SWID-DOCUMENTS]] for more details about SWIDs and SWID Documents.
 
 **Example initial DID document:**
 
