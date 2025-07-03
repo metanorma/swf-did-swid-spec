@@ -109,8 +109,6 @@ of the first entry of a data structure known as <a path-0="digitalbazaar.github.
 </code></pre>
 <h2 id="did-method-operations"><a class="toc-anchor" href="#did-method-operations" >§</a> DID Method Operations</h2>
 <h3 id="create-register"><a class="toc-anchor" href="#create-register" >§</a> Create (Register)</h3>
-<p>The following diagram describes the process of creating and registering a <code>did:swid</code>:</p>
-<p><img src="./images/swid-registration.png" alt="swid-registration.png"></p>
 <h4 id="creating-a-didswid"><a class="toc-anchor" href="#creating-a-didswid" >§</a> Creating a <code>did:swid</code></h4>
 <p>To create a <code>did:swid</code>, the Entity first generates a private/public key pair that controls the DID.
 The public key is included as a verification method in the initial version of the DID document.</p>
@@ -146,7 +144,8 @@ is used as the <code>scid</code> part of the <code>did:swid</code> identifier (s
 <pre><code>did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv
 </code></pre>
 <h4 id="using-a-did-issuer-service"><a class="toc-anchor" href="#using-a-did-issuer-service" >§</a> Using a DID Issuer Service</h4>
-<p>A <code>did:swid</code> or other type of SWID may be created by a “DID Issuer Service” at behest of the Entity.</p>
+<p>A <code>did:swid</code> or other type of SWID may be created by a “DID Issuer Service”
+at behest of the Entity.</p>
 <p>The following diagram describes the process of creating a SWID using a “DID Issuer Service”:</p>
 <p><img src="./images/creating-a-swid-using-a-did-issuer-service.png" alt="creating-a-swid-using-a-did-issuer-service.png"></p>
 <p>When creating a <code>did:swid</code> or other type of SWID, the “DID Issuer Service” MUST
@@ -199,11 +198,41 @@ DIF [<a class="spec-reference" href="#ref:DID-REGISTRATION">DID-REGISTRATION</a>
 <p>During the process of creating a SWID, the Entity MAY be required to prove control
 of its SWID’s associated public key, using  <a path-0="identity.foundation"path-1="did-registration"path-2="#signing-request-set"href="https://identity.foundation/did-registration/#signing-request-set" >Signing Requests</a>
 and <a path-0="identity.foundation"path-1="did-registration"path-2="#signing-response-set"href="https://identity.foundation/did-registration/#signing-response-set" >Signing Responses</a>.</p>
-<h4 id="registering-a-swid-in-a-registry"><a class="toc-anchor" href="#registering-a-swid-in-a-registry" >§</a> Registering a SWID in a Registry</h4>
-<p>Registering a SWID in a registry is an optional step after creating the SWID. Most SWIDs will not be recorded
-in a centralized registry. SWIDs may be registered in a system of distributed, decentralized registries.</p>
-<p>The process, requirements, and interfaces for registering a SWID in a registry is currently out-of-scope
-of this specification.</p>
+<p><strong>Example Signing Request:</strong></p>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+	<span class="token property">"jobId"</span><span class="token operator">:</span> <span class="token string">"96202012-41d8-424a-85a9-3673bda6abc7"</span><span class="token punctuation">,</span>
+	<span class="token property">"didState"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token property">"state"</span><span class="token operator">:</span> <span class="token string">"action"</span><span class="token punctuation">,</span>
+		<span class="token property">"action"</span><span class="token operator">:</span> <span class="token string">"signPayload"</span><span class="token punctuation">,</span>
+		<span class="token property">"signingRequest"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token property">"signingRequestCreate"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+				<span class="token property">"kid"</span><span class="token operator">:</span> <span class="token string">"#keys-1"</span><span class="token punctuation">,</span>
+				<span class="token property">"alg"</span><span class="token operator">:</span> <span class="token string">"EdDSA"</span><span class="token punctuation">,</span>
+				<span class="token property">"purpose"</span><span class="token operator">:</span> <span class="token string">"authentication"</span><span class="token punctuation">,</span>
+				<span class="token property">"serializedPayload"</span><span class="token operator">:</span> <span class="token string">"&lt;-- base 64 encoded -->"</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+	<span class="token property">"didRegistrationMetadata"</span><span class="token operator">:</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span><span class="token punctuation">,</span>
+	<span class="token property">"didDocumentMetadata"</span><span class="token operator">:</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>Example Signing Response:</strong></p>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+    <span class="token property">"jobId"</span><span class="token operator">:</span> <span class="token string">"96202012-41d8-424a-85a9-3673bda6abc7"</span><span class="token punctuation">,</span>
+    <span class="token property">"options"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"clientSecretMode"</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">"secret"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"signingResponse"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">"signingRequestCreate"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">"signature"</span><span class="token operator">:</span> <span class="token string">"&lt;-- base64 encoded -->"</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">"didDocument"</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <h3 id="read-resolve"><a class="toc-anchor" href="#read-resolve" >§</a> Read (Resolve)</h3>
 <p>To resolve a <code>did:swid</code> or other type of SWID, the <a path-0="www.w3.org"path-1="TR"path-2="did-resolution"path-3="#resolving"href="https://www.w3.org/TR/did-resolution/#resolving" ><code>resolve</code> function</a> of the
 W3C [<a class="spec-reference" href="#ref:DID-RESOLUTION">DID-RESOLUTION</a>] specification is used.</p>
@@ -552,7 +581,6 @@ in this specification as permitted.</dd>
 <ul>
 <li><a href="#creating-a-didswid" >Creating a <code>did:swid</code></a></li>
 <li><a href="#using-a-did-issuer-service" >Using a DID Issuer Service</a></li>
-<li><a href="#registering-a-swid-in-a-registry" >Registering a SWID in a Registry</a></li>
 </ul>
 </li>
 <li><a href="#read-resolve" >Read (Resolve)</a></li>

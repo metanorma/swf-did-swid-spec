@@ -2,10 +2,6 @@
 
 ### Create (Register)
 
-The following diagram describes the process of creating and registering a `did:swid`:
-
-![swid-registration.png](./images/swid-registration.png)
-
 #### Creating a `did:swid`
 
 To create a `did:swid`, the Entity first generates a private/public key pair that controls the DID.
@@ -53,7 +49,8 @@ did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv
 
 #### Using a DID Issuer Service
 
-A `did:swid` or other type of SWID may be created by a "DID Issuer Service" at behest of the Entity.
+A `did:swid` or other type of SWID may be created by a "DID Issuer Service"
+at behest of the Entity.
 
 The following diagram describes the process of creating a SWID using a "DID Issuer Service":
 
@@ -121,13 +118,46 @@ During the process of creating a SWID, the Entity MAY be required to prove contr
 of its SWID's associated public key, using  [Signing Requests](https://identity.foundation/did-registration/#signing-request-set)
 and [Signing Responses](https://identity.foundation/did-registration/#signing-response-set).
 
-#### Registering a SWID in a Registry
+**Example Signing Request:**
 
-Registering a SWID in a registry is an optional step after creating the SWID. Most SWIDs will not be recorded
-in a centralized registry. SWIDs may be registered in a system of distributed, decentralized registries.
+```json
+{
+	"jobId": "96202012-41d8-424a-85a9-3673bda6abc7",
+	"didState": {
+		"state": "action",
+		"action": "signPayload",
+		"signingRequest": {
+			"signingRequestCreate": {
+				"kid": "#keys-1",
+				"alg": "EdDSA",
+				"purpose": "authentication",
+				"serializedPayload": "<-- base 64 encoded -->"
+			}
+		}
+	},
+	"didRegistrationMetadata": { ... },
+	"didDocumentMetadata": { ... }
+}
+```
 
-The process, requirements, and interfaces for registering a SWID in a registry is currently out-of-scope
-of this specification.
+**Example Signing Response:**
+
+```json
+{
+    "jobId": "96202012-41d8-424a-85a9-3673bda6abc7",
+    "options": {
+        "clientSecretMode": true
+    },
+    "secret": {
+        "signingResponse": {
+            "signingRequestCreate": {
+                "signature": "<-- base64 encoded -->"
+            }
+        }
+    },
+    "didDocument": {}
+}
+```
 
 ### Read (Resolve)
 

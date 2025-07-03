@@ -10,7 +10,7 @@ database    "DID Method" as DM
 E -> EW : Create SWID (DID)
 EW -> EW : Create and store\nprivate/public key pair 
 EW -> DI : Request DID
-DI <-> EW : Prove control of DID\nusing private/public key pair
+DI <-> EW : Prove control of DID\nsigning requests/responses
 DI -> DM : Write DID
 DM -> DI : DID
 DI -> EW : DID
