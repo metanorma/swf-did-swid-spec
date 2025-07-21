@@ -167,7 +167,7 @@ W3C [[spec: DID-RESOLUTION]] specification is used.
 **Example Request to resolve a SWID:**
 
 ```
-HTTP POST to https://<swid-resolver>/identifiers/did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv
+HTTP GET to https://<swid-resolver>/identifiers/did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv
 ```
 
 **Example Response:**
