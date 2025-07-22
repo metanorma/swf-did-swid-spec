@@ -1,7 +1,7 @@
 The `did:swid` DID Method<br>v0.1 / Editors Draft
 ==================
 
-![Spatial Web Logo](https://raw.githubusercontent.com/peacekeeper/did-swid-spec/refs/heads/main/spatialweb.jpg)
+![Spatial Web Logo](https://raw.githubusercontent.com/spatial-web-foundation/did-swid-spec/refs/heads/main/spatialweb.jpg)
 
 **Specification Status:** v0.1 - EDITORS DRAFT
 
@@ -10,7 +10,7 @@ The `did:swid` DID Method<br>v0.1 / Editors Draft
 **Specification Version:** v0.1 (see [Changelog](#didswid-version-changelog))
 
 **Source of Latest Draft:**
-  [https://github.com/peacekeeper/did-swid-spec](https://github.com/peacekeeper/did-swid-spec)
+  [https://github.com/spatial-web-foundation/did-swid-spec](https://github.com/spatial-web-foundation/did-swid-spec)
 
 **Previous Versions:**
 
@@ -18,9 +18,9 @@ The `did:swid` DID Method<br>v0.1 / Editors Draft
 ~ [Markus Sabadello](https://github.com/peacekeeper)
 
 **Participate:**
-~ [GitHub repo](https://github.com/peacekeeper/did-swid-spec)
-~ [File a bug](https://github.com/peacekeeper/did-swid-spec/issues)
-~ [Commit history](https://github.com/peacekeeper/did-swid-spec/commits/main)
+~ [GitHub repo](https://github.com/spatial-web-foundation/did-swid-spec)
+~ [File a bug](https://github.com/spatial-web-foundation/did-swid-spec/issues)
+~ [Commit history](https://github.com/spatial-web-foundation/did-swid-spec/commits/main)
 
 **Implementations:**
 (none yet)

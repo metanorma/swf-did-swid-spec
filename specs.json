@@ -17,17 +17,17 @@
       ],
       "source": {
         "host": "github",
-        "account": "peacekeeper",
+        "account": "spatial-web-foundation",
         "repo": "did-swid-spec"
       },
       "output_path": "./dist",
-      "logo": "https://raw.githubusercontent.com/peacekeeper/did-swid-spec/refs/heads/main/spatialweb.jpg",
-      "logo_link": "https://github.com/peacekeeper/did-swid-spec",
+      "logo": "https://raw.githubusercontent.com/spatial-web-foundation/did-swid-spec/refs/heads/main/spatialweb.jpg",
+      "logo_link": "https://github.com/spatial-web-foundation/did-swid-spec",
       "katex": true,
       "external_specs": [
         {
           "SWIDS-AND-SWID-DOCUMENTS": {
-            "href": "https://peacekeeper.github.io/swid-document-spec/",
+            "href": "https://spatial-web-foundation.github.io/swid-document-spec/",
             "title": "SWIDs and SWID Documents",
             "rawDate": "2025-06-20",
             "authors": [
