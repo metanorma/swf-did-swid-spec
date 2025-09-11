@@ -1,0 +1,9 @@
+---
+metanorma:
+  source:
+    files:
+      - sources/document.adoc
+
+  collection:
+    name: The did:swid DID Method
+    organization: Spatial Web Foundation / did:swid 
