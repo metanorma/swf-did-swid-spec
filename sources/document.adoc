@@ -1,0 +1,37 @@
+= The did:swid DID Method - v0.1 (Editors Draft)
+:doctype: specification
+:docstage: draft
+:draft: 0.1
+:revdate: 2025-07-22
+:copyright-year: 2025
+:language: en
+:edition: 0.1
+:imagesdir: images
+:mn-document-class: ieee
+:mn-output-extensions: xml,html,doc,rxl,pdf
+:local-cache-only:
+:toc-figures: true
+:toc-tables: true
+:surname: Sabadello
+:givenname: Markus
+:role: editor
+:publisher: Spatial Web Foundation
+:publisher_logo: images/spatialweb.jpg
+
+include::sections/01-abstract.adoc[]
+
+include::sections/02-overview.adoc[]
+
+include::sections/03-identifier.adoc[]
+
+include::sections/04-did-method-operations.adoc[]
+
+include::sections/05-swid-registry.adoc[]
+
+include::sections/06-security-considerations.adoc[]
+
+include::sections/07-definitions.adoc[]
+
+include::sections/08-references.adoc[]
+
+include::sections/09-changelog.adoc[]

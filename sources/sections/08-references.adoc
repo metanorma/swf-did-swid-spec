@@ -1,0 +1,35 @@
+
+[bibliography]
+== References
+
+* [[[DID-CORE,(DID-CORE)W3C did-core]]]
+ 
+* [[[DID-REGISTRATION,(DID-REGISTRATION)]]]
+span:title[DID Registration].
+span:uri:citation[https://identity.foundation/did-registration/].
+span:givenname[Markus] span:surname[Sabadello];
+span:givenname[Cihan] span:surname[Saglam];
+span:givenname[Ahamed] span:surname[Azeem];
+span:date[2025-05-19].
+span:note[Status: Draft].
+ 
+* [[[DID-RESOLUTION,(DID-RESOLUTION)W3C did-resolution]]]
+ 
+* [[[MULTIFORMATS,(MULTIFORMATS)]]]
+span:title[Multiformats].
+span:uri:citation[https://datatracker.ietf.org/doc/draft-multiformats-multibase/08/].
+span:givenname[Juan] span:surname[Benet];
+span:givenname[Manu] span:surname[Sporny];
+span:date[2024-02-21].
+span:note[Status: Draft].
+ 
+* [[[RFC2234,RFC 2234]]]
+ 
+* [[[RFC8785,RFC 8785]]]
+ 
+* [[[SWIDS-AND-SWID-DOCUMENTS,(SWIDS-AND-SWID-DOCUMENTS)]]]
+span:title[SWIDs and SWID Documents].
+span:uri:citation[https://spatial-web-foundation.github.io/swid-document-spec/].
+span:givenname[Markus] span:surname[Sabadello];
+span:date[2025-06-20].
+span:note[Status: Draft].
