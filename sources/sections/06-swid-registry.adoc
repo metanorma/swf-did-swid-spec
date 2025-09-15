@@ -2,16 +2,18 @@
 [[the-swid-registry]]
 == The SWID Registry
 
-The SWID Registry contains a list of SWIDs. For each SWID, the SWID Registry contains
-a cryptographic event log following the
-https://digitalbazaar.github.io/cel-spec/#the-did-document-cel-specification[Cryptographic Event Log]
-specification. Every entry in the event log is cryptographically signed by the entity
-that controls a SWID.
+The SWID Registry contains a list of SWIDs. For each SWID, the SWID Registry
+contains a cryptographic event log following the Cryptographic Event Log
+specification (<<cel-spec>>). Every entry in the event log is cryptographically
+signed by the entity that controls a SWID.
 
-For example, the SWID Registry could contain the following cryptographic event log
+.Example SWID Registry entry
+[example]
+====
+The SWID Registry could contain the following cryptographic event log
 for a SWID that has been created, and then updated once:
 
-[source%unnumbered,json]
+[source,json]
 ----
 {
   "log": [{
@@ -94,3 +96,4 @@ for a SWID that has been created, and then updated once:
   }]
 }
 ----
+====

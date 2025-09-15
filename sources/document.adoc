@@ -1,37 +1,42 @@
 = The did:swid DID Method - v0.1 (Editors Draft)
-:doctype: specification
-:docstage: draft
-:draft: 0.1
+:docnumber: 4
+:edition: 1
 :revdate: 2025-07-22
 :copyright-year: 2025
 :language: en
-:edition: 0.1
-:imagesdir: images
-:mn-document-class: ieee
-:mn-output-extensions: xml,html,doc,rxl,pdf
-:local-cache-only:
-:toc-figures: true
-:toc-tables: true
+:title-intro-en: Spatial web technologies
+:title-main-en: The did:swid DID Method
+:committee: SWID
+:committee-type: technical
+:mn-document-class: swf
+:mn-output-extensions: xml,html,pdf,rxl
+:doctype: standard
+:status: published
+:docidentifier: SWF 4:2025 (0.1.0)
 :surname: Sabadello
 :givenname: Markus
 :role: editor
-:publisher: Spatial Web Foundation
-:publisher_logo: images/spatialweb.jpg
+:imagesdir: images
+:local-cache-only:
+:toc-figures: true
+:toc-tables: true
 
-include::sections/01-abstract.adoc[]
+include::sections/00-abstract.adoc[]
 
-include::sections/02-overview.adoc[]
+include::sections/01-scope.adoc[]
 
-include::sections/03-identifier.adoc[]
+include::sections/02-normrefs.adoc[]
 
-include::sections/04-did-method-operations.adoc[]
+include::sections/03-terms.adoc[]
 
-include::sections/05-swid-registry.adoc[]
+include::sections/04-identifier.adoc[]
 
-include::sections/06-security-considerations.adoc[]
+include::sections/05-did-method-operations.adoc[]
 
-include::sections/07-definitions.adoc[]
+include::sections/06-swid-registry.adoc[]
 
-include::sections/08-references.adoc[]
+include::sections/07-security-considerations.adoc[]
 
-include::sections/09-changelog.adoc[]
+include::sections/a0-bibliography.adoc[]
+
+include::sections/a1-version-changelog.adoc[]

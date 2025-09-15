@@ -17,9 +17,10 @@ it MUST have an HSTP Service Endpoint.
 
 See <<SWIDS-AND-SWID-DOCUMENTS>> for more details about SWIDs and SWID Documents.
 
-*Example initial DID document:*
-
-[source%unnumbered,json]
+.Example initial DID document
+[example]
+====
+[source,json]
 ----
 {
    "@context": [
@@ -41,15 +42,22 @@ See <<SWIDS-AND-SWID-DOCUMENTS>> for more details about SWIDs and SWID Documents
    }]
 }
 ----
+====
 
-Using the initial version of the DID document, the first entry of a https://digitalbazaar.github.io/cel-spec/#the-did-document-cel-specification[Cryptographic Event Log] is constructed (also see <<the-swid-registry>>). A cryptographic digest (hash) of this entry is created and encoded using {{multihash,options="linkmention,linkref"}}, and is used as the `scid` part of the `did:swid` identifier (see <<identifier,Identifier>>).
+Using the initial version of the DID document, the first entry of a
+Cryptographic Event Log (<<cel-spec>>) is constructed (also see
+<<the-swid-registry>>). A cryptographic digest (hash) of this entry is created
+and encoded using multihash (<<MULTIFORMATS>>), and is used as the `scid` part
+of the `did:swid` identifier (see <<identifier>>).
 
-*Example SWID:*
-
-[source%unnumbered,json]
+.Example SWID
+[example]
+====
+[source,json]
 ----
 did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv
 ----
+====
 
 [[using-a-did-issuer-service]]
 ==== Using a DID Issuer Service
@@ -60,8 +68,8 @@ of the Entity.
 The following diagram describes the process of creating a SWID using a
 "DID Issuer Service":
 
-[%unnumbered]
-image::creating-a-swid-using-a-did-issuer-service.png[]
+.Creating a SWID using a DID Issuer Service
+plantuml_image::../plantuml/creating-a-swid-using-a-did-issuer-service.puml[]
 
 When creating a `did:swid` or other type of SWID, the "DID Issuer Service" MUST enforce
 that the DID document associated with the SWID is a conformant SWID Document, i.e.
@@ -70,16 +78,15 @@ an error response.
 
 See <<SWIDS-AND-SWID-DOCUMENTS>> for more details about SWIDs and SWID Documents.
 
-To create a SWID using a "DID Issuer Service", the https://identity.foundation/did-registration/#create[`create` function] of the DIF <<DID-REGISTRATION>> specification is used.
+To create a SWID using a "DID Issuer Service", the `create` function of the DIF
+specification (<<DID-REGISTRATION>>) is used.
 
-*Example Request to create a SWID:*
+.Example Request to create a SWID
+[example]
+====
+HTTP POST to identifier:[https://<did-issuer>/create?method=swid]
 
-[source%unnumbered,json]
-----
-HTTP POST to https://<did-issuer>/create?method=swid
-----
-
-[source%unnumbered,json]
+[source,json]
 ----
 {
   "options": {
@@ -107,10 +114,13 @@ HTTP POST to https://<did-issuer>/create?method=swid
   }
 }
 ----
+====
 
-*Example Response:*
 
-[source%unnumbered,json]
+.Example Response
+[example]
+====
+[source,json]
 ----
 {
   "didState": {
@@ -122,13 +132,16 @@ HTTP POST to https://<did-issuer>/create?method=swid
   "didDocumentMetadata": { }
 }
 ----
+====
 
-During the process of creating a SWID, the Entity MAY be required to prove control
-of its SWID's associated public key, using https://identity.foundation/did-registration/#signing-request-set[Signing Requests] and https://identity.foundation/did-registration/#signing-response-set[Signing Responses].
+During the process of creating a SWID, the Entity MAY be required to prove
+control of its SWID's associated public key, using Signing Requests
+(<<DID-REGISTRATION>>) and Signing Responses (<<DID-REGISTRATION>>).
 
-*Example Signing Request:*
-
-[source%unnumbered,json]
+.Example Signing Request
+[example]
+====
+[source,json]
 ----
 {
 	"jobId": "96202012-41d8-424a-85a9-3673bda6abc7",
@@ -148,10 +161,12 @@ of its SWID's associated public key, using https://identity.foundation/did-regis
 	"didDocumentMetadata": { ... }
 }
 ----
+====
 
-*Example Signing Response:*
-
-[source%unnumbered,json]
+.Example Signing Response
+[example]
+====
+[source,json]
 ----
 {
     "jobId": "96202012-41d8-424a-85a9-3673bda6abc7",
@@ -168,22 +183,24 @@ of its SWID's associated public key, using https://identity.foundation/did-regis
     "didDocument": {}
 }
 ----
+====
 
 [[read-resolve]]
 === Read (Resolve)
 
-To resolve a `did:swid` or other type of SWID, the https://www.w3.org/TR/did-resolution/#resolving[`resolve` function] of the W3C <<DID-RESOLUTION>> specification is used.
+To resolve a `did:swid` or other type of SWID, the `resolve` function
+<<DID-RESOLUTION>> is used.
 
-*Example Request to resolve a SWID:*
+.Example Request to resolve a SWID
+[example]
+====
+HTTP GET to identifier:[https://<swid-resolver>/identifiers/did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv]
+====
 
-[source%unnumbered,json]
-----
-HTTP GET to https://<swid-resolver>/identifiers/did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv
-----
-
-*Example Response:*
-
-[source%unnumbered,json]
+.Example Response
+[example]
+====
+[source,json]
 ----
 {
   "didDocument": {
@@ -211,25 +228,25 @@ HTTP GET to https://<swid-resolver>/identifiers/did:swid:zQmQoeG7u6XBtdXoek5p3aP
   "didDocumentMetadata": { }
 }
 ----
+====
 
 [[update-rotate]]
 === Update (Rotate)
 
-To update a `did:swid` or other type of SWID, the https://identity.foundation/did-registration/#update[`update` function] of the DIF <<DID-REGISTRATION>> specification is used.
+To update a `did:swid` or other type of SWID, the `update` function
+<<DID-REGISTRATION>> is used.
 
 Updating a SWID can include the following:
 
 * Rotating the public key that controls the SWID.
 * Changing the HSTP service endpoint of the SWID.
 
-*Example Request to update a SWID:*
+.Example Request to update a SWID
+[example]
+====
+HTTP POST to identifier:[https://<swid-registry>/update]
 
-[source%unnumbered,json]
-----
-HTTP POST to https://<swid-registry>/update
-----
-
-[source%unnumbered,json]
+[source,json]
 ----
 {
   "did": "did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv",
@@ -260,21 +277,24 @@ HTTP POST to https://<swid-registry>/update
    }
 }
 ----
+====
 
-*Example Response:*
-
-[source%unnumbered,json]
+.Example Response
+[example]
+====
+[source,json]
 ----
 {
   "didState": {
     "state": "finished",
-    "did": "did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv", 
+    "did": "did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv",
     "secret": { }
   },
   "didRegistrationMetadata": { },
   "didDocumentMetadata": { }
 }
 ----
+====
 
 During the process of updating a SWID, the Entity MAY be required to prove control
 of its SWID's associated public key, using
@@ -284,18 +304,15 @@ and https://identity.foundation/did-registration/#signing-response-set[Signing R
 [[deactivate-revoke]]
 === Deactivate (Revoke)
 
-To deactivate a `did:swid` or other type of SWID, the
-https://identity.foundation/did-registration/#deactivate[`deactivate` function] of
+To deactivate a `did:swid` or other type of SWID, the `deactivate` function of
 the DIF <<DID-REGISTRATION>> specification is used.
 
-*Example Request to deactivate a SWID:*
+.Example Request to deactivate a SWID
+[example]
+====
+HTTP POST to identifier:[https://<swid-registry>/deactivate]
 
-[source%unnumbered,json]
-----
-HTTP POST to https://<swid-registry>/deactivate
-----
-
-[source%unnumbered,json]
+[source,json]
 ----
 {
   "did": "did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv",
@@ -305,23 +322,25 @@ HTTP POST to https://<swid-registry>/deactivate
   "secret": { }
 }
 ----
+====
 
-*Example Response:*
-
-[source%unnumbered,json]
+.Example Response
+[example]
+====
+[source,json]
 ----
 {
   "didState": {
     "state": "finished",
-    "did": "did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv", 
+    "did": "did:swid:zQmQoeG7u6XBtdXoek5p3aPoTjaSRemHAKrMcY2Hcjpe3jv",
     "secret": { }
   },
   "didRegistrationMetadata": { },
   "didDocumentMetadata": { }
 }
 ----
+====
 
-During the process of deactivating a SWID, the Entity MAY be required to prove control
-of its SWID's associated public key, using
-https://identity.foundation/did-registration/#signing-request-set[Signing Requests]
-and https://identity.foundation/did-registration/#signing-response-set[Signing Responses].
+During the process of deactivating a SWID, the Entity MAY be required to prove
+control of its SWID's associated public key, using Signing Requests
+(<<DID-REGISTRATION>>) and Signing Responses (<<DID-REGISTRATION>>).
