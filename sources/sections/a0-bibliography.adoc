@@ -1,0 +1,59 @@
+
+[bibliography]
+== References
+
+* [[[SWF,Spatial Web Foundation]]],
+span:organization[Spatial Web Foundation]
+span:title[Spatial Web Foundation]
+span:uri.citation[https://spatialwebfoundation.org/]
+
+* [[[DID-REGISTRATION,DID-REGISTRATION]]],
+span:organization[Decentralized Identity Foundation]
+span:type[standard]
+span:title[DID Registration]
+span:givenname[Markus] span:surname[Sabadello]
+span:givenname[Cihan] span:surname[Saglam]
+span:givenname[Ahamed] span:surname[Azeem]
+span:docid[DIF did-registration]
+span:date[2025-05-19]
+span:note[Status: Draft]
+span:uri.citation[https://identity.foundation/did-registration]
+
+* [[[DID-RESOLUTION,W3C did-resolution]]]
+
+* [[[w3c-di,W3C CG Data Integrity 1.0]]],
+span:title[Data Integrity 1.0, W3C Final Community Group Report]
+span:uri.citation[https://www.w3.org/community/reports/credentials/CG-FINAL-data-integrity-20220722/]
+span:date[2022-07-22]
+span:type[standard]
+span:docid.w3c[W3C CG Data Integrity]
+
+* [[[DID-11,W3C WD did-1.1]]]
+
+* [[[MULTIFORMATS,IETF I-D multiformats-multibase-08]]]
+
+* [[[RFC2234,RFC 2234]]]
+
+* [[[RFC8785,RFC 8785]]]
+
+* [[[SWIDS-AND-SWID-DOCUMENTS,SWF 3:2025 (0.1.0)]]]
+span:title[SWIDs and SWID Documents]
+span:uri.citation[https://spatial-web-foundation.github.io/swid-document-spec/]
+span:organization[Spatial Web Foundation]
+span:givenname[Markus] span:surname[Sabadello]
+span:date[2025-06-20]
+span:note[Status: Draft]
+span:docid[SWF 3:2025 (0.1.0)]
+
+* [[[ISO8601,ISO 8601 (all parts)]]]
+
+* [[[w3c_vc-data-model-20,W3C REC vc-data-model]]]
+
+* [[[w3c_cid-10,W3C REC cid-1.0]]]
+
+* [[[cel-spec,Cryptographic Event Log]]],
+span:title[Cryptographic Event Log]
+span:uri.citation[https://digitalbazaar.github.io/cel-spec/]
+span:organization[Digital Bazaar]
+
+* [[[vc-di-eddsa-v1.0,W3C REC vc-di-eddsa]]],

@@ -1,0 +1,102 @@
+== Terms and definitions
+
+=== self-certifying identifier
+admitted:[SCID]
+
+object identifier derived from initial data such that an attacker could not create
+a new object with the same identifier
+
+=== Data Integrity
+
+specification of mechanisms for ensuring the authenticity and integrity of structured
+digital documents using cryptography, such as digital signatures and other digital
+mathematical proofs
+
+[.source]
+<<w3c-di>>
+
+
+=== decentralized identifier
+admitted:[DID]
+
+[%metadata]
+abbreviation-type:: initialism
+
+type of identifier that enable verifiable, decentralized digital identities
+
+NOTE: A DID refers to any subject (e.g., a person, organization, thing, data
+model, abstract entity, etc.) as determined by the controller of the DID.
+
+[.source]
+<<DID-CORE>>
+
+
+=== DID controller
+
+entity that controls (create, updates, deletes) a given {{DID}}
+
+[.source]
+<<DID-CORE>>
+
+
+=== DID document
+
+the document returned when a {{DID}} is resolved
+
+[.source]
+<<DID-CORE>>
+
+
+=== DID method
+
+mechanism by which a particular type of {{DID}} and its associated
+{{DID document}} are created, resolved, updated, and deactivated
+
+NOTE: DID methods are defined using separate DID method specifications.
+
+// NOTE: Done using bibliography
+// === ISO8601
+//
+// A date/time expressed using the https://en.wikipedia.org/wiki/ISO_8601[ISO8601 Standard].
+
+
+=== JSON Canonicalization Scheme
+
+method for canonicalizing a JSON structure such that is suitable
+for verifiable hashing or signing according to <<RFC8785>>
+
+[.source]
+<<RFC8785>>
+
+
+=== multibase
+
+A specification for encoding binary data as a string using a prefix that
+indicates the encoding.
+
+
+=== multikey
+
+A verification method that encodes key types into a single binary stream that is
+then encoded as a <<multibase,multibase>> value.
+
+
+=== multihash
+
+mechanism for differentiating instances of hashes
+
+NOTE: Software creating a hash prefixes (according to the specification) data to
+the hash indicating the algorithm used and the length of the hash, so that
+software receiving the hash knows how to verify it. Although multihash supports
+many hash algorithms, for interoperability, {{DID controllers}} *MUST* only use
+the hash algorithms defined in the specification as permitted.
+
+[.source]
+<<MULTIFORMATS>>
+
+=== W3C VCDM
+
+verifiable credential according to <<w3c_vc-data-model-20>>
+
+[.source]
+<<w3c_vc-data-model-20>>
