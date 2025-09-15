@@ -69,7 +69,7 @@ The following diagram describes the process of creating a SWID using a
 "DID Issuer Service":
 
 .Creating a SWID using a DID Issuer Service
-plantuml_image::../plantuml/creating-a-swid-using-a-did-issuer-service.puml[]
+plantuml_image::./plantuml/creating-a-swid-using-a-did-issuer-service.puml[]
 
 When creating a `did:swid` or other type of SWID, the "DID Issuer Service" MUST enforce
 that the DID document associated with the SWID is a conformant SWID Document, i.e.
