@@ -2,7 +2,7 @@ name: generate
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
+  group: "${{ github.workflow }}-${{ github.head_ref || github.ref_name }}"
   cancel-in-progress: true
 
 jobs:
@@ -26,11 +26,19 @@ jobs:
         with:
           submodules: true
 
+      - name: Cache Metanorma assets
+        uses: actions-mn/cache@v1
+
+      - name: Print Metanorma version
+        run: metanorma --version
+
       - name: Metanorma generate site
         uses: actions-mn/build-and-publish@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           agree-to-terms: true
+          destination: artifact
+          artifact-name: draft
 
   deploy:
     if: ${{ github.ref_name == github.event.repository.default_branch }}
