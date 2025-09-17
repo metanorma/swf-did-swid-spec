@@ -41,7 +41,7 @@ entity that controls (create, updates, deletes) a given {{DID}}
 
 === DID document
 
-the document returned when a {{DID}} is resolved
+document returned when a {{DID}} is resolved
 
 [.source]
 <<DID-CORE>>
@@ -71,14 +71,14 @@ for verifiable hashing or signing according to <<RFC8785>>
 
 === multibase
 
-A specification for encoding binary data as a string using a prefix that
-indicates the encoding.
+specification for encoding binary data as a string using a prefix that
+indicates the encoding
 
 
 === multikey
 
-A verification method that encodes key types into a single binary stream that is
-then encoded as a <<multibase,multibase>> value.
+verification method that encodes key types into a single binary stream that is
+then encoded as a {{multibase}} value
 
 
 === multihash
