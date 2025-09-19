@@ -1,18 +1,18 @@
 = The did:swid DID Method - v0.1 (Editors Draft)
 :docnumber: 4
 :edition: 1
-:revdate: 2025-07-22
+:revdate: 2025-09-26
 :copyright-year: 2025
 :language: en
-:title-intro-en: Spatial web technologies
-:title-main-en: The did:swid DID Method
+:title-intro-en: The Spatial Web
+:title-main-en: DID Method for the Spatial Web (did:swid) Implementation Specification 
 :committee: SWID
 :committee-type: technical
 :mn-document-class: swf
 :mn-output-extensions: xml,html,pdf,rxl
 :doctype: standard
 :status: published
-:docidentifier: SWF 4:2025 (0.1.0)
+:docidentifier: SWF STD-4:2025 (0.1.0)
 :imagesdir: images
 :local-cache-only:
 :toc-figures: true
@@ -37,13 +37,20 @@
 :role-description_6: leadership
 :contributor-position_6: Senior Ethics Advisor
 :comment: [backcover] participants list below
-:fullname_7: Markus Sabadello
-:fullname_8: Gabriel René
-:fullname_9: Dan Mapes
+:fullname_7: Markus Sabadello (lead editor)
+:fullname_8: Kurt Cagle 
+:fullname_9: Scott Carroll
 :fullname_10: Bastiaan den Braber
-:fullname_11: George Percivall
-:fullname_12: Dan Richardson
-:fullname_13: Dr. Sarah Grace Manski
+:fullname_11: Stephane Fellah 
+:fullname_12: Jacqueline Hynes 
+:fullname_13: George Percivall
+:fullname_14: Christine Perey
+:fullname_15: Capm Petersen
+:fullname_16: Reese Plews
+:fullname_17: Gabriel René
+:fullname_18: Lior Saar
+:fullname_19: Hari Thiruvengada
+:fullname_20: Ronald Tse
 
 include::sections/00-abstract.adoc[]
 
