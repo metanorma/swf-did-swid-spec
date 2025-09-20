@@ -50,8 +50,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           agree-to-terms: true
-          destination: artifact
-          artifact-name: draft
           use-bundler: true
 
   deploy:
